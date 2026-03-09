@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none">
+  <!--
+    STREETSOLE App Icon — 1024x1024 Master
+    Design: Abstract street intersection with exploration path.
+    Concept: A bold, geometric crossroads with one path lit green —
+    the street you just explored. Reads clearly at 48px.
+    No text, no fine detail, pure geometry.
+  -->
+
+  <!-- Background — deep urban dark -->
+  <rect width="1024" height="1024" rx="224" fill="#0a0f1a"/>
+
+  <!-- Subtle grid — city blocks, very faint -->
+  <!-- Horizontal streets -->
+  <rect x="0" y="330" width="1024" height="4" fill="#1f2937" rx="2"/>
+  <rect x="0" y="510" width="1024" height="4" fill="#1f2937" rx="2"/>
+  <rect x="0" y="690" width="1024" height="4" fill="#1f2937" rx="2"/>
+
+  <!-- Vertical streets -->
+  <rect x="330" y="0" width="4" height="1024" fill="#1f2937" rx="2"/>
+  <rect x="510" y="0" width="4" height="1024" fill="#1f2937" rx="2"/>
+  <rect x="690" y="0" width="4" height="1024" fill="#1f2937" rx="2"/>
+
+  <!-- Main exploration path — bold green route -->
+  <!-- This is THE icon element. A clear stepped path moving
+       from bottom-left to upper-right across the grid. -->
+  <polyline
+    points="160,860 332,860 332,692 512,692 512,512 692,512 692,332 860,332"
+    stroke="#10b981"
+    stroke-width="56"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none" />
+
+  <!-- Glow effect behind path for depth -->
+  <polyline
+    points="160,860 332,860 332,692 512,692 512,512 692,512 692,332 860,332"
+    stroke="#10b981"
+    stroke-width="90"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    opacity="0.15" />
+
+  <!-- Current position indicator — bright dot at path end -->
+  <circle cx="860" cy="332" r="44" fill="#10b981"/>
+  <circle cx="860" cy="332" r="28" fill="#34d399"/>
+  <circle cx="860" cy="332" r="14" fill="#ecfdf5"/>
+
+  <!-- Starting point — subtle origin marker -->
+  <circle cx="160" cy="860" r="20" fill="#10b981" opacity="0.4"/>
+</svg>

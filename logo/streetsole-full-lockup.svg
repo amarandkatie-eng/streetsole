@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" fill="none">
+  <!--
+    STREETSOLE Full Lockup — Symbol + Wordmark
+    Horizontal arrangement with consistent vertical centering.
+  -->
+
+  <!-- Symbol (scaled down) -->
+  <g transform="translate(0, 10) scale(0.35)">
+    <!-- Sole shape -->
+    <path d="M176 48 C112 48, 64 96, 64 160 L64 384 C64 432, 96 464, 160 464 L352 464 C416 464, 448 432, 448 384 L448 128 C448 80, 416 48, 352 48 Z"
+          fill="#111827" />
+    <!-- Street grid — horizontal -->
+    <line x1="112" y1="160" x2="400" y2="160" stroke="#374151" stroke-width="8" stroke-linecap="round"/>
+    <line x1="112" y1="240" x2="400" y2="240" stroke="#374151" stroke-width="8" stroke-linecap="round"/>
+    <line x1="112" y1="320" x2="400" y2="320" stroke="#374151" stroke-width="8" stroke-linecap="round"/>
+    <line x1="112" y1="400" x2="400" y2="400" stroke="#374151" stroke-width="8" stroke-linecap="round"/>
+    <!-- Street grid — vertical -->
+    <line x1="192" y1="96" x2="192" y2="432" stroke="#374151" stroke-width="8" stroke-linecap="round"/>
+    <line x1="320" y1="96" x2="320" y2="432" stroke="#374151" stroke-width="8" stroke-linecap="round"/>
+    <line x1="256" y1="96" x2="256" y2="432" stroke="#374151" stroke-width="8" stroke-linecap="round"/>
+    <!-- Explored path -->
+    <polyline points="192,400 192,320 256,320 256,240 320,240 320,160 400,160"
+              stroke="#10b981" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
+              fill="none" />
+    <!-- Current position -->
+    <circle cx="400" cy="160" r="16" fill="#10b981"/>
+    <circle cx="400" cy="160" r="10" fill="#34d399"/>
+    <circle cx="192" cy="400" r="10" fill="#6ee7b7" opacity="0.6"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="240" y="130"
+        font-family="'Manrope', 'Inter', system-ui, sans-serif"
+        font-weight="800"
+        font-size="88"
+        letter-spacing="0.06em"
+        fill="#f9fafb">STREET</text>
+  <text x="670" y="130"
+        font-family="'Manrope', 'Inter', system-ui, sans-serif"
+        font-weight="800"
+        font-size="88"
+        letter-spacing="0.06em"
+        fill="#10b981">SOLE</text>
+</svg>

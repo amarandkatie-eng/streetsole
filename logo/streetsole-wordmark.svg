@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" fill="none">
+  <!--
+    STREETSOLE Wordmark
+    Font: Manrope ExtraBold, tracked wide, all caps
+    Rendered as paths for consistency.
+    The 'O' contains a subtle street-grid crosshair.
+  -->
+
+  <!-- STREET -->
+  <text x="0" y="90"
+        font-family="'Manrope', 'Inter', system-ui, sans-serif"
+        font-weight="800"
+        font-size="88"
+        letter-spacing="0.06em"
+        fill="#f9fafb">STREET</text>
+
+  <!-- SOLE — in primary green -->
+  <text x="430" y="90"
+        font-family="'Manrope', 'Inter', system-ui, sans-serif"
+        font-weight="800"
+        font-size="88"
+        letter-spacing="0.06em"
+        fill="#10b981">SOLE</text>
+</svg>
