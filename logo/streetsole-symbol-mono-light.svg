@@ -1,22 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
   <!--
     STREETSOLE Symbol — Monochrome Light (white on transparent)
+    Fluorescent sneaker outline in walking action.
     For use on dark backgrounds, app headers, social icons.
   -->
-  <path d="M176 48 C112 48, 64 96, 64 160 L64 384 C64 432, 96 464, 160 464 L352 464 C416 464, 448 432, 448 384 L448 128 C448 80, 416 48, 352 48 Z"
-        fill="none" stroke="#ffffff" stroke-width="10"/>
 
-  <line x1="112" y1="160" x2="400" y2="160" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
-  <line x1="112" y1="240" x2="400" y2="240" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
-  <line x1="112" y1="320" x2="400" y2="320" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
-  <line x1="112" y1="400" x2="400" y2="400" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
-  <line x1="192" y1="96" x2="192" y2="432" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
-  <line x1="320" y1="96" x2="320" y2="432" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
-  <line x1="256" y1="96" x2="256" y2="432" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
+  <g transform="translate(256,280) rotate(-12) translate(-256,-280)">
+    <!-- Sole / midsole -->
+    <path d="M88 310
+             C88 310, 90 340, 110 348
+             L140 356
+             C160 362, 200 368, 240 370
+             L340 374
+             C370 374, 400 370, 420 362
+             L432 354
+             C440 350, 442 340, 438 330
+             L430 318
+             C426 310, 418 306, 408 306
+             L120 298
+             C104 298, 90 302, 88 310 Z"
+          fill="none" stroke="#ffffff" stroke-width="8" stroke-linejoin="round"/>
 
-  <polyline points="192,400 192,320 256,320 256,240 320,240 320,160 400,160"
-            stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
-            fill="none" />
-  <circle cx="400" cy="160" r="14" fill="#ffffff"/>
-  <circle cx="192" cy="400" r="8" fill="#ffffff" opacity="0.5"/>
+    <!-- Toe box and upper -->
+    <path d="M120 298
+             C110 290, 96 270, 92 252
+             C88 234, 92 218, 104 210
+             C116 202, 140 198, 168 196
+             L220 194
+             C240 194, 256 198, 264 206
+             L280 220"
+          fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Mid-panel and quarter -->
+    <path d="M264 206
+             C272 198, 290 192, 310 190
+             L350 188
+             C370 188, 388 192, 400 200
+             L416 214
+             C424 220, 428 230, 424 242"
+          fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Heel counter / collar -->
+    <path d="M424 242
+             C420 258, 418 274, 416 286
+             C414 296, 412 302, 408 306"
+          fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Ankle collar opening -->
+    <path d="M280 220
+             C296 228, 320 236, 344 240
+             C368 244, 396 244, 424 242"
+          fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Tongue -->
+    <path d="M280 220
+             C276 206, 270 186, 268 170
+             C266 158, 270 148, 280 144
+             C290 140, 300 142, 306 148"
+          fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Lace hints -->
+    <line x1="272" y1="210" x2="296" y2="198" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    <line x1="276" y1="220" x2="304" y2="206" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Sole tread detail -->
+    <line x1="160" y1="356" x2="160" y2="370" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="200" y1="358" x2="200" y2="372" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="240" y1="360" x2="240" y2="374" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="280" y1="362" x2="280" y2="374" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="320" y1="364" x2="320" y2="376" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="360" y1="364" x2="360" y2="374" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="400" y1="360" x2="400" y2="368" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Swoosh accent -->
+    <path d="M150 280 C200 264, 280 256, 380 268"
+          fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Motion lines -->
+  <line x1="60" y1="240" x2="30" y2="240" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
+  <line x1="70" y1="264" x2="24" y2="264" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <line x1="64" y1="288" x2="38" y2="288" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.18"/>
 </svg>
