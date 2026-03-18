@@ -6,14 +6,36 @@
   <title>Streetsole — Explore Every Street</title>
   <meta name="description" content="Turn your city into a game. Walk streets, build your exploration map, and compete on neighbourhood leaderboards.">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Streetsole — Explore Every Street">
+  <meta property="og:description" content="Turn your city into a game. Walk streets, build your exploration map, and compete on neighbourhood leaderboards.">
+  <meta property="og:url" content="https://streetsole.app">
+  <meta property="og:image" content="https://streetsole.app/images/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Streetsole — Explore Every Street">
+  <meta name="twitter:description" content="Turn your city into a game. Walk streets, build your exploration map, and compete on neighbourhood leaderboards.">
+  <meta name="twitter:image" content="https://streetsole.app/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="../brand-guide/design-tokens.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ============================================================
        NAVIGATION
@@ -36,7 +58,12 @@
         </svg>
         <span class="nav__logo-text">STREET<span class="nav__logo-accent">SOLE</span></span>
       </a>
-      <div class="nav__links">
+      <button class="nav__hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+      <div class="nav__links" id="nav-menu">
         <a href="#how-it-works" class="nav__link">How It Works</a>
         <a href="#features" class="nav__link">Features</a>
         <a href="#leaderboards" class="nav__link">Leaderboards</a>
@@ -46,13 +73,15 @@
   </nav>
 
 
+  <main id="main-content">
+
   <!-- ============================================================
        HERO
        ============================================================ -->
-  <section class="hero" id="hero">
+  <section class="hero" id="hero" aria-labelledby="hero-title">
     <div class="container hero__inner">
       <div class="hero__content">
-        <h1 class="hero__title">
+        <h1 class="hero__title" id="hero-title">
           Explore Every<br>
           <span class="hero__title-accent">Street</span>
         </h1>
@@ -60,18 +89,18 @@
           Turn your city into a game. Walk streets, build your personal exploration map, and compete with others on neighbourhood leaderboards.
         </p>
         <div class="hero__cta">
-          <a href="#download" class="btn btn--primary btn--lg">
+          <button type="button" class="btn btn--primary btn--lg download-cta">
             <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
             Download on iOS
-          </a>
-          <a href="#download" class="btn btn--secondary btn--lg">
+          </button>
+          <button type="button" class="btn btn--secondary btn--lg download-cta">
             <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
               <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34 16.81 15.12zm1.57-.88L21 12l-2.61-2.24-3.64 2.12 3.63 2.36zm-2.12-8.46L6.05 2.66l10.76 6.22 3.45-2.72z"/>
             </svg>
             Get on Android
-          </a>
+          </button>
         </div>
         <p class="hero__social-proof">
           <span class="hero__stat">12,000+</span> streets explored this week
@@ -80,7 +109,7 @@
       <div class="hero__visual">
         <!-- Exploration map visualization -->
         <div class="hero__map">
-          <svg viewBox="0 0 600 700" fill="none" class="hero__map-svg" aria-label="Exploration map showing walked streets highlighted in green">
+          <svg viewBox="0 0 600 700" fill="none" class="hero__map-svg" role="img" aria-label="Exploration map showing 347 of 2,841 streets explored (12.2%) with walked streets highlighted in green">
             <!-- Dark map background -->
             <rect width="600" height="700" rx="24" fill="#0a0f1a"/>
 
@@ -128,10 +157,7 @@
             </g>
 
             <!-- Current position pulse -->
-            <circle cx="480" cy="400" r="20" fill="#10b981" opacity="0.15">
-              <animate attributeName="r" values="14;24;14" dur="2s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.2;0.05;0.2" dur="2s" repeatCount="indefinite"/>
-            </circle>
+            <circle cx="480" cy="400" r="20" fill="#10b981" opacity="0.15" class="pulse-ring"/>
             <circle cx="480" cy="400" r="8" fill="#10b981"/>
             <circle cx="480" cy="400" r="4" fill="#ecfdf5"/>
 
@@ -157,10 +183,10 @@
   <!-- ============================================================
        HOW IT WORKS
        ============================================================ -->
-  <section class="section how-it-works" id="how-it-works">
+  <section class="section how-it-works" id="how-it-works" aria-labelledby="how-it-works-title">
     <div class="container">
       <p class="section__label">How It Works</p>
-      <h2 class="section__title">Three steps to<br>own your city</h2>
+      <h2 class="section__title" id="how-it-works-title">Three steps to<br>own your city</h2>
 
       <div class="steps">
         <div class="step">
@@ -219,11 +245,11 @@
   <!-- ============================================================
        PERSONAL MAP
        ============================================================ -->
-  <section class="section map-section" id="features">
+  <section class="section map-section" id="features" aria-labelledby="features-title">
     <div class="container map-section__inner">
       <div class="map-section__content">
         <p class="section__label">Your Exploration Map</p>
-        <h2 class="section__title">See every street you've ever walked</h2>
+        <h2 class="section__title" id="features-title">See every street you've ever walked</h2>
         <p class="section__desc">
           Your personal exploration map tracks every street, path, and lane. Watch your city transform from dark to green as you discover it on foot.
         </p>
@@ -250,7 +276,7 @@
         <div class="phone-mockup">
           <div class="phone-mockup__screen">
             <!-- App screen showing progress map -->
-            <svg viewBox="0 0 375 812" fill="none" class="phone-screen-svg">
+            <svg viewBox="0 0 375 812" fill="none" class="phone-screen-svg" role="img" aria-label="App screenshot showing a personal exploration map with 347 streets walked and 12.2% of Melbourne explored">
               <rect width="375" height="812" fill="#0a0f1a"/>
 
               <!-- Status bar area -->
@@ -317,7 +343,7 @@
   <!-- ============================================================
        LEADERBOARDS
        ============================================================ -->
-  <section class="section leaderboard-section" id="leaderboards">
+  <section class="section leaderboard-section" id="leaderboards" aria-labelledby="leaderboards-title">
     <div class="container leaderboard-section__inner">
       <div class="leaderboard-section__visual">
         <div class="leaderboard-card">
@@ -325,37 +351,37 @@
             <h3 class="leaderboard-card__title">Fitzroy</h3>
             <span class="leaderboard-card__subtitle">Neighbourhood Ranking</span>
           </div>
-          <div class="leaderboard-card__list">
-            <div class="leaderboard-row leaderboard-row--gold">
-              <span class="leaderboard-row__rank">1</span>
+          <ol class="leaderboard-card__list">
+            <li class="leaderboard-row leaderboard-row--gold">
+              <span class="leaderboard-row__rank" aria-hidden="true">1</span>
               <span class="leaderboard-row__avatar">JL</span>
               <span class="leaderboard-row__name">Jamie L.</span>
               <span class="leaderboard-row__stat">94.2%</span>
-            </div>
-            <div class="leaderboard-row">
-              <span class="leaderboard-row__rank">2</span>
+            </li>
+            <li class="leaderboard-row">
+              <span class="leaderboard-row__rank" aria-hidden="true">2</span>
               <span class="leaderboard-row__avatar">SK</span>
               <span class="leaderboard-row__name">Sarah K.</span>
               <span class="leaderboard-row__stat">87.1%</span>
-            </div>
-            <div class="leaderboard-row">
-              <span class="leaderboard-row__rank">3</span>
+            </li>
+            <li class="leaderboard-row">
+              <span class="leaderboard-row__rank" aria-hidden="true">3</span>
               <span class="leaderboard-row__avatar">MR</span>
               <span class="leaderboard-row__name">Marcus R.</span>
               <span class="leaderboard-row__stat">76.8%</span>
-            </div>
-            <div class="leaderboard-row leaderboard-row--you">
-              <span class="leaderboard-row__rank">14</span>
+            </li>
+            <li class="leaderboard-row leaderboard-row--you" value="14">
+              <span class="leaderboard-row__rank" aria-hidden="true">14</span>
               <span class="leaderboard-row__avatar leaderboard-row__avatar--you">You</span>
               <span class="leaderboard-row__name">You</span>
               <span class="leaderboard-row__stat">12.2%</span>
-            </div>
-          </div>
+            </li>
+          </ol>
         </div>
       </div>
       <div class="leaderboard-section__content">
         <p class="section__label">Leaderboards</p>
-        <h2 class="section__title">Compete for every neighbourhood</h2>
+        <h2 class="section__title" id="leaderboards-title">Compete for every neighbourhood</h2>
         <p class="section__desc">
           See who's explored the most streets in your neighbourhood, suburb, and city. Climb the rankings as you walk more and discover hidden streets others have missed.
         </p>
@@ -381,11 +407,11 @@
   <!-- ============================================================
        SHAREABLE MAPS
        ============================================================ -->
-  <section class="section share-section">
+  <section class="section share-section" id="share" aria-labelledby="share-title">
     <div class="container share-section__inner">
       <div class="share-section__content">
         <p class="section__label">Share Your Progress</p>
-        <h2 class="section__title">Show the world your city</h2>
+        <h2 class="section__title" id="share-title">Show the world your city</h2>
         <p class="section__desc">
           Export beautiful exploration maps to share on social media. Your walked streets glow against the dark city grid — a unique fingerprint of your urban exploration.
         </p>
@@ -399,7 +425,7 @@
       <div class="share-section__visual">
         <!-- Share card preview -->
         <div class="share-card">
-          <svg viewBox="0 0 400 500" fill="none" class="share-card__svg">
+          <svg viewBox="0 0 400 500" fill="none" class="share-card__svg" role="img" aria-label="Shareable exploration card showing 12.2% of Melbourne explored with walked streets highlighted in green">
             <rect width="400" height="500" rx="20" fill="#0a0f1a"/>
             <g stroke="#1f2937" stroke-width="1.5">
               <line x1="40" y1="80" x2="360" y2="80"/><line x1="40" y1="140" x2="360" y2="140"/>
@@ -428,23 +454,23 @@
   <!-- ============================================================
        DOWNLOAD CTA
        ============================================================ -->
-  <section class="section cta-section" id="download">
+  <section class="section cta-section" id="download" aria-labelledby="cta-title">
     <div class="container cta-section__inner">
-      <h2 class="cta-section__title">Start exploring<br>your city today</h2>
+      <h2 class="cta-section__title" id="cta-title">Start exploring<br>your city today</h2>
       <p class="cta-section__desc">Free to download. Every street is waiting.</p>
       <div class="cta-section__buttons">
-        <a href="#" class="btn btn--primary btn--lg">
+        <button type="button" class="btn btn--primary btn--lg download-cta">
           <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
           </svg>
           Download on iOS
-        </a>
-        <a href="#" class="btn btn--secondary btn--lg">
+        </button>
+        <button type="button" class="btn btn--secondary btn--lg download-cta">
           <svg class="btn__icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
             <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34 16.81 15.12zm1.57-.88L21 12l-2.61-2.24-3.64 2.12 3.63 2.36zm-2.12-8.46L6.05 2.66l10.76 6.22 3.45-2.72z"/>
           </svg>
           Get on Android
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -453,7 +479,14 @@
   <!-- ============================================================
        FOOTER
        ============================================================ -->
-  <footer class="footer">
+  </main>
+
+  <!-- Coming Soon Toast -->
+  <div class="toast" id="coming-soon-toast" role="alert" aria-live="polite" hidden>
+    Coming soon! We're working hard to launch Streetsole.
+  </div>
+
+  <footer class="footer" aria-label="Site footer">
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="nav__logo-text">STREET<span class="nav__logo-accent">SOLE</span></span>
@@ -462,20 +495,20 @@
       <div class="footer__links">
         <div class="footer__col">
           <h4 class="footer__col-title">Product</h4>
-          <a href="#" class="footer__link">Features</a>
-          <a href="#" class="footer__link">Leaderboards</a>
-          <a href="#" class="footer__link">Download</a>
+          <a href="#features" class="footer__link">Features</a>
+          <a href="#leaderboards" class="footer__link">Leaderboards</a>
+          <a href="#download" class="footer__link">Download</a>
         </div>
         <div class="footer__col">
           <h4 class="footer__col-title">Company</h4>
-          <a href="#" class="footer__link">About</a>
-          <a href="#" class="footer__link">Blog</a>
-          <a href="#" class="footer__link">Careers</a>
+          <a href="#hero" class="footer__link">About</a>
+          <a href="#hero" class="footer__link">Blog</a>
+          <a href="#hero" class="footer__link">Careers</a>
         </div>
         <div class="footer__col">
           <h4 class="footer__col-title">Legal</h4>
-          <a href="#" class="footer__link">Privacy</a>
-          <a href="#" class="footer__link">Terms</a>
+          <a href="/privacy.html" class="footer__link">Privacy</a>
+          <a href="/terms.html" class="footer__link">Terms</a>
         </div>
       </div>
       <div class="footer__bottom">
@@ -483,6 +516,76 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile hamburger menu
+    (function() {
+      var btn = document.querySelector('.nav__hamburger');
+      var menu = document.getElementById('nav-menu');
+      if (!btn || !menu) return;
+
+      function openMenu() {
+        btn.setAttribute('aria-expanded', 'true');
+        menu.classList.add('nav__links--open');
+        btn.classList.add('nav__hamburger--active');
+      }
+
+      function closeMenu() {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('nav__links--open');
+        btn.classList.remove('nav__hamburger--active');
+      }
+
+      btn.addEventListener('click', function() {
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        if (isOpen) { closeMenu(); } else { openMenu(); }
+      });
+
+      // Close on link click
+      menu.querySelectorAll('.nav__link, .btn').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+          btn.focus();
+        }
+      });
+
+      // Close on click outside
+      document.addEventListener('click', function(e) {
+        if (btn.getAttribute('aria-expanded') === 'true' && !menu.contains(e.target) && !btn.contains(e.target)) {
+          closeMenu();
+        }
+      });
+    })();
+
+    // Download CTA "coming soon" toast
+    (function() {
+      var toast = document.getElementById('coming-soon-toast');
+      var timer;
+      document.querySelectorAll('.download-cta').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          clearTimeout(timer);
+          toast.hidden = false;
+          timer = setTimeout(function() { toast.hidden = true; }, 3000);
+        });
+      });
+
+      // Nav download button also triggers toast
+      var navDownload = document.querySelector('.nav__links .btn--primary');
+      if (navDownload) {
+        navDownload.addEventListener('click', function(e) {
+          e.preventDefault();
+          clearTimeout(timer);
+          toast.hidden = false;
+          timer = setTimeout(function() { toast.hidden = true; }, 3000);
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>
